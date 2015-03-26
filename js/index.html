@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rotated Image Data URL</title>
+    <style type="text/css" media="screen">
+        canvas,
+        textarea {
+            display: block
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <textarea id="data" rows="20" cols="80"></textarea>
+    <button onclick="toB()">Image to base64</button>
+    <button onclick="bTo()">base64 to Image</button>
+    <button onclick="rotateCanvas('canvas', 90)">rotate Image</button>
+    <img id="echo">
+    <script type="text/javascript">
+        var lastImage = null;
+
+        drawImageOnCanvas('canvas', 'monalisa.jpg');
+
+
+        function drawImageOnCanvas(canvasId, imgSrc) {
+            var can = document.getElementById(canvasId);
+            var ctx = can.getContext('2d');
+
+            var img = new Image();
+            img.onload = function () {
+                can.width = img.width;
+                can.height = img.height;
+                //                ctx.translate(img.width - 1, img.height - 1);
+                //                ctx.rotate(Math.PI);
+                ctx.drawImage(img, 0, 0, img.width, img.height);
+                //                var url = document.getElementById('data').value = can.toDataURL();
+                //                document.getElementById('echo').src = url;
+            }
+            img.src = imgSrc;
+        }
+
+        function toB() {
+            document.getElementById('data').value = canvasToBase64('canvas');
+        }
+
+        function bTo() {
+            lastImage = base64ToCanvas('canvas', document.getElementById('data').value);
+        }
+
+        function canvasToBase64(canvasId) {
+            var can = document.getElementById(canvasId);
+            return can.toDataURL("image/jpeg");
+        }
+
+        function base64ToCanvas(canvasId, base64Str) {
+            var can = document.getElementById(canvasId);
+            var ctx = can.getContext('2d');
+            var image = new Image();
+            image.onload = function () {
+                ctx.drawImage(image, 0, 0, image.width, image.height);
+            };
+            image.src = base64Str;
+            return image;
+        }
+
+        function rotateCanvas(canvasId, amount) {
+            if (lastImage === null) {
+                return;
+            }
+            var canvas = document.getElementById(canvasId);
+            var context = canvas.getContext('2d');
+            canvas.width = lastImage.height;
+            canvas.height = lastImage.width;   
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            context.save();
+
+            context.translate(canvas.width / 2, canvas.height / 2);
+
+            context.rotate(amount * Math.PI / 180);
+
+            context.drawImage(lastImage, -lastImage.width / 2, -lastImage.height / 2);
+
+            context.restore();
+        }
+    </script>
+</body>
+
+</html>
