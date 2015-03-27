@@ -18,6 +18,7 @@
     <button onclick="bTo()">base64 to Image</button>
     <button onclick="rotateCanvas('canvas', 90)">rotate Image</button>
     <img id="echo">
+    <script src="js/glitchLib.js"></script>
     <script type="text/javascript">
         var lastImage = null;
 
@@ -40,8 +41,9 @@
             }
             img.src = imgSrc;
         }
-
+        
         function toB() {
+            glitchImage('canvas', 20);
             document.getElementById('data').value = canvasToBase64('canvas');
         }
 
