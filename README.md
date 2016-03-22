@@ -1,6 +1,16 @@
 # glitch-studio
 data bending &amp; glitch tools
 
+## JavaScript tools
+
+### glitchLib.js
+
+demo: 
+
+example:
+
+![alt glitch-mona-jslib.jpg](https://github.com/alexadam/glitch-studio/blob/master/examples/mona-glitch-jslib.png?raw=true)
+
 ## bash tools
 
 ### glitch.sh
