@@ -5,7 +5,7 @@ data bending &amp; glitch tools
 
 ### glitchLib.js
 
-demo: 
+demo: https://alexadam.github.io/demos/jslib-glitch/index.html
 
 example:
 
