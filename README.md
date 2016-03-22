@@ -9,8 +9,8 @@ data bending &amp; glitch tools
 ./glitch.sh sourceFile <amount, optional, default 10>  
 ```
 
-it works with any file type
-the output is a new file named "glitch_sourceFile"
+it works with any file type  
+the output is a new file named "glitch_sourceFile"  
 "amount" is an integer between 1 and n -> how many times (random between 1 and n) to randomly change bytes in the original file
 
 ### gifsy.sh
