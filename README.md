@@ -3,6 +3,16 @@ data bending &amp; glitch tools
 
 ## bash tools
 
+### glitch.sh
+
+```
+./glitch.sh sourceFile <amount, optional, default 10>  
+```
+
+it works with any file type
+the output is a new file named "glitch_sourceFile"
+"amount" is an integer between 1 and n -> how many times (random between 1 and n) to randomly change bytes in the original file
+
 ### gifsy.sh
 
 ```
@@ -11,23 +21,14 @@ data bending &amp; glitch tools
 
 convert an image to .gif
 
-### glitch.sh
-```
-./glitch.sh sourceFile <amount, optional, default 10>  
-```
-
-the output is a new file named "glitch_sourceFile"
-"amount" is an integer, between 1 and n -> how many times (random between 1 and n) to apply the random glitch generator
-
 ### after_gifsy_and_glitch.sh
 
 ```
 ./after_gifsy_and_glitch.sh sourceImage
 ```
-
 repair the glitched .gif
 
-#### bash tools example:
+#### bash tools example 1:
 
 ```
 ./gifsy.sh monalisa.jpg
@@ -42,3 +43,13 @@ input image:
 result:
 
 ![alt glitch-mona.gif](https://github.com/alexadam/glitch-studio/blob/master/examples/monalisa-glitch.gif?raw=true)
+
+#### bash tools example 2:
+
+```
+./glitch.sh monalisa.jpg 25
+```
+
+result:
+
+![alt glitch-mona.jpg](https://github.com/alexadam/glitch-studio/blob/master/examples/monalisa-glitch.jpg?raw=true)
