@@ -3,6 +3,18 @@ data bending &amp; glitch tools
 
 ## JavaScript tools
 
+### Dynamic Glitch
+
+demo: https://alexadam.github.io/demos/dynamic-glitch/index.html
+
+examples:
+
+https://vimeo.com/160601444
+
+https://vimeo.com/160601817
+
+![alt dyn-glitch-ex.png](https://github.com/alexadam/glitch-studio/blob/master/examples/dyn-glitch-ex.png?raw=true)
+
 ### glitchLib.js
 
 demo: https://alexadam.github.io/demos/jslib-glitch/index.html

@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,400italic,700italic);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    overflow: auto;
+}
+#navBar {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    z-index: 999;
+    padding: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#codeEditorHolder {
+    margin-top: 30px;
+    height: 100%;
+}
+.content-holder {
+    width: 100%;
+}
+.CodeMirror {
+    font-family: "Ubuntu Mono";
+    line-height: 1.2em;
+    font-size: 15px;
+    width: 98%;
+}
+.highlight-token {
+    border-bottom: 1px black dotted;
+}
+.float-right {
+    float: right;
+}
+.float-left {
+    float: left;
+}
+.col-30 {
+    width: 30%;
+    border-right: 1px solid black;
+    height: 100%;
+    float: left;
+}
+.col-70 {
+    overflow: auto;
+    float: left;
+}
+
+/**/
+
+.home-link a {
+    float: left;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 15px;
+}
+.navButton {
+    padding: 5px;
+    background-color: #EFE03B;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+}
+.greenButton {
+    background-color: green;
+    color: white;
+}
+.navButtonRows {
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+}
+.navButton:hover {
+    padding: 5px;
+    background-color: white;
+    color: #007fff;
+    font-size: 15px;
+    border: 0;
+}
+.settingsLabel {
+    color: black;
+}
+.tRow {
+    margin: 5px;
+    padding-top: 10px;
+}
+.tRow > input {
+    padding: 3px;
+}
+.dropDownMenu {
+    position: relative;
+    display: inline-block;
+}
+.dropDownMenuContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    z-index: 1;
+}
+.dropDownMenu:hover .dropDownMenuContent {
+    display: block;
+}
+
+/**/
+
+.pop-up {
+    width: 190px;
+    height: auto;
+    background-color: gray;
+    display: none;
+    z-index: 999;
+    position: absolute;
+    padding: 5px;
+}
+.pop-up button {
+    width: 22%;
+    padding: 4px 0;
+    margin: 0;
+    min-width: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+}
+.pop-up-close-button {
+    float: right;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: red !important;
+}
+.pop-up-row {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.pop-up-range {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+
+#canvas {
+    margin-top: 30px;
+    width: auto;
+    max-width: 69vw;
+    height: auto;
+    display: inline-block;
+}
+
+.info {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    background: yellow;
+    z-index: 9999;
+    border: solid 3px black;
+    font-family: 'Roboto Condensed', sans-serif;
+}
