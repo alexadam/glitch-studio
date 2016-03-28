@@ -5,7 +5,7 @@ data bending &amp; glitch tools
 
 ### Dynamic Glitch
 
-Glitch an image by randomly changing a codec's internal parameters. In these examples you can dynamically change a JavaScript implementation of the PNG decoder (on the left pane) and see the live result (on the right pane).
+Glitch an image by randomly changing a codec's internal parameters. In these examples you can dynamically change a JavaScript implementation of the PNG decoder (on the left pane) and see the live result (on the right pane). To edit faster, click & hold (or Ctrl + ~) on the underlined items -> it works on Math functions, operators and numbers.
 
 demo: https://alexadam.github.io/demos/dynamic-glitch/index.html
 
