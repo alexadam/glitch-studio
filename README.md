@@ -34,11 +34,11 @@ example:
 ### glitch.sh
 
 ```
-./glitch.sh sourceFile <amount, optional, default 10>  
+./glitch.sh sourceFile <amount, optional, default 10>
 ```
 
-it works with any file type  
-the output is a new file named "glitch_sourceFile"  
+it works with any file type
+the output is a new file named "glitch_sourceFile"
 "amount" is an integer between 1 and n -> how many times (random between 1 and n) to randomly change bytes in the original file
 
 ### gifsy.sh
@@ -81,3 +81,19 @@ result:
 result:
 
 ![alt glitch-mona.jpg](https://github.com/alexadam/glitch-studio/blob/master/examples/monalisa-glitch.jpg?raw=true)
+
+## Installation
+
+### Requirements
+
+This software requires the following libraries:
+
+*   [imagemagick](https://www.imagemagick.org/script/index.php)
+*   [shuf (via coreutils)](https://www.gnu.org/software/coreutils/coreutils.html)
+*   [gifsicle](https://www.lcdf.org/gifsicle/)
+
+If you're on Mac OSX, you can install it via brew:
+
+```sh
+brew install imagemagick coreutils gifsicle
+```
