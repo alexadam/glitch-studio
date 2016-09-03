@@ -2,7 +2,7 @@ newFileName='glitch_'$1;
 cat "$1" > "$newFileName";
 
 function i__gli() {
-	fileSize=$(wc -c "$1");
+	fileSize=$(wc -c < "$1");
 	headerSize=1000;
 	skip=$(shuf -i "$headerSize"-"$fileSize" -n 1);
 	count=$(shuf -i 1-10 -n 1);
