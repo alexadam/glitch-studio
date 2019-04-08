@@ -29,13 +29,15 @@ Demo: https://alexadam.github.io/demos/dynamic-glitch/dist/jpeg-to-gif/index.htm
 
 Example:
 
-![alt glitch-mona-jslib.jpg](https://github.com/alexadam/glitch-studio/blob/master/examples/mona-glitch-jslib.png?raw=true)
+![alt gif-ex.png](https://github.com/alexadam/glitch-studio/blob/master/examples/gif-ex.png?raw=true)
 
 ![alt glitch-mona.gif](https://github.com/alexadam/glitch-studio/blob/master/examples/monalisa-glitch.gif?raw=true)
 
 ## JPEG Glitch
 
 Demo: https://alexadam.github.io/demos/dynamic-glitch/dist/static-jpeg/index.html
+
+![alt glitch-mona-jslib.jpg](https://github.com/alexadam/glitch-studio/blob/master/examples/mona-glitch-jslib.png?raw=true)
 
 ![alt glitch-mona.jpg](https://github.com/alexadam/glitch-studio/blob/master/examples/monalisa-glitch.jpg?raw=true)
 
