@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>js Glitch Lib</title>
+        <style type="text/css" media="screen">
+            canvas {
+                display: block;
+                width: auto;
+            }
+
+            button {
+                padding: 10px;
+                background-color: #007fff;
+                color: white;
+                margin-bottom: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <button onclick="glitch()">Glitch</button>
+        <span>amount:</span>
+        <input type="number" min="0" name="name" value="20" oninput="changeInput(this.value)">
+        <input type='file' name='img' size='65' id='uploadimage'/>
+        <canvas id="canvas"></canvas>
+
+        <script src="js/glitchLib.js"></script>
+        <script type="text/javascript">
+            var glitchAmount = 20;
+
+            function draw(ev) {
+                var can = document.getElementById('canvas');
+                var ctx = can.getContext('2d'),
+                    img = new Image(),
+                    f = document.getElementById("uploadimage").files[0],
+                    url = window.URL || window.webkitURL,
+                    src = url.createObjectURL(f);
+
+                img.src = src;
+                img.onload = function() {
+                    can.width = img.width;
+                    can.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+                    url.revokeObjectURL(src);
+                }
+            }
+
+            document.getElementById("uploadimage").addEventListener("change", draw, false)
+
+            drawImageOnCanvas('canvas', 'monalisa.jpg');
+
+            function drawImageOnCanvas(canvasId, imgSrc) {
+                var can = document.getElementById(canvasId);
+                var ctx = can.getContext('2d');
+
+                var img = new Image();
+                img.onload = function() {
+                    can.width = img.width;
+                    can.height = img.height;
+                    ctx.drawImage(img, 0, 0, img.width, img.height);
+                }
+                img.src = imgSrc;
+            }
+
+            function glitch() {
+                glitchImage('canvas', glitchAmount);
+            }
+
+            function changeInput(value) {
+                glitchAmount = Number(value);
+            }
+        </script>
+    </body>
+
+</html>
