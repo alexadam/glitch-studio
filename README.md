@@ -33,22 +33,6 @@ example:
 
 ![alt glitch-mona.jpg](https://github.com/alexadam/glitch-studio/blob/master/examples/monalisa-glitch.jpg?raw=true)
 
-## Installation
-
-### Requirements
-
-This software requires the following libraries:
-
-*   [imagemagick](https://www.imagemagick.org/script/index.php)
-*   [shuf (via coreutils)](https://www.gnu.org/software/coreutils/coreutils.html)
-*   [gifsicle](https://www.lcdf.org/gifsicle/)
-
-If you're on Mac OSX, you can install it via brew:
-
-```sh
-brew install imagemagick coreutils gifsicle
-```
-
 ## Credits
 
 PNG codec: https://github.com/devongovett/png.js/
