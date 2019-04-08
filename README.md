@@ -1,11 +1,14 @@
 # glitch-studio
-data bending &amp; glitch tools
 
-## JavaScript tools
+Data bending &amp; glitch tools
 
-### Dynamic Glitch
+![alt ah1.png](https://github.com/alexadam/glitch-studio/blob/master/examples/sh1.png?raw=true)
 
-Glitch an image by randomly changing a codec's internal parameters. In these examples you can dynamically change a JavaScript implementation of the PNG decoder (on the left pane) and see the live result (on the right pane). To edit faster, click & hold (or Ctrl + ~) on the underlined items -> it works on Math functions, operators and numbers.
+**Demo:**
+
+## Dynamic PNG Codec Glitch
+
+Glitch an image by randomly changing a PNG image codec's internal parameters. In these examples you can dynamically change a JavaScript implementation of the PNG decoder (on the left pane) and see the live result (on the right pane). To edit faster, click & hold (or Ctrl + ~) on the underlined items -> it works on Math functions, operators and numbers.
 
 demo: https://alexadam.github.io/demos/dynamic-glitch/index.html
 
@@ -18,7 +21,9 @@ https://vimeo.com/160601817
 ![alt dyn-glitch-ex.png](https://github.com/alexadam/glitch-studio/blob/master/examples/dyn-glitch-ex.png?raw=true)
 
 
-### glitchLib.js
+## JPEG -> GIF Glitch
+
+Create a GIF animation by repeating an image + random glitch
 
 demo: https://alexadam.github.io/demos/jslib-glitch/index.html
 
@@ -26,10 +31,10 @@ example:
 
 ![alt glitch-mona-jslib.jpg](https://github.com/alexadam/glitch-studio/blob/master/examples/mona-glitch-jslib.png?raw=true)
 
-
-
-
 ![alt glitch-mona.gif](https://github.com/alexadam/glitch-studio/blob/master/examples/monalisa-glitch.gif?raw=true)
+
+
+## JPEG Glitch
 
 ![alt glitch-mona.jpg](https://github.com/alexadam/glitch-studio/blob/master/examples/monalisa-glitch.jpg?raw=true)
 

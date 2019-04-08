@@ -1,7 +1,12 @@
 
 
+document.getElementById('render').style.display = 'none'
+document.getElementById('wait').style.display = 'none'
+document.getElementById('redoButton').style.display = 'none'
 
 function draw(ev) {
+    document.getElementById('wait').style.display = 'block'
+
     let ctx = document.getElementById('canvas').getContext('2d')
     let rotateCtx = document.getElementById('secretCanvasRotate').getContext('2d')
     let img = new Image()
@@ -9,15 +14,19 @@ function draw(ev) {
     let url = window.URL || window.webkitURL
     let src = url.createObjectURL(f)
 
+
+
     img.src = src;
     img.onload = () => {
         let imgWidth = img.width
         let imgHeight = img.height
-        canvas.width = imgWidth
-        canvas.height = imgHeight
         let renderElem = document.getElementById('render')
         renderElem.width = imgWidth
         renderElem.height = imgHeight
+
+        let canvas = document.getElementById('canvas')
+        canvas.width = imgWidth
+        canvas.height = imgHeight
         let secretCanvas = document.getElementById('secretCanvas')
         secretCanvas.width = imgWidth
         secretCanvas.height = imgHeight
@@ -41,14 +50,19 @@ function draw(ev) {
         gif.on('finished', (blob) => {
           let renderElem = document.getElementById('render')
           renderElem.src = URL.createObjectURL(blob)
+
+          document.getElementById('render').style.display = 'block'
+          document.getElementById('wait').style.display = 'none'
+          document.getElementById('redoButton').style.display = 'block'
         });
 
         let nrOfFrames = document.getElementById('nrOfFrames').value
         let delayBetweenFrames = document.getElementById('delayBetweenFrames').value
-        let glitchAmount = 1
+        let glitchAmount = document.getElementById('howMuchGlitch').value
+        let initialDelay = document.getElementById('initialDelay').value
 
         // first frame
-        gif.addFrame(ctx, {copy: true, delay: 1500});
+        gif.addFrame(ctx, {copy: true, delay: initialDelay});
 
         for (let i = 0; i < nrOfFrames; i++) {
 
@@ -74,6 +88,8 @@ function draw(ev) {
 
         setTimeout(() => {
             gif.render();
+
+
         }, 1000)
 
         // gif.render();
