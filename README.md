@@ -2,7 +2,7 @@
 
 Data bending &amp; glitch tools
 
-![alt ah1.png](https://github.com/alexadam/glitch-studio/blob/master/examples/sh1.png?raw=true)
+![alt main.png](https://github.com/alexadam/glitch-studio/blob/master/examples/main.png?raw=true)
 
 **Demo:**
 
