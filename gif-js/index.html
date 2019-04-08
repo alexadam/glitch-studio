@@ -8,20 +8,73 @@
         <script src="gif-lib/gif.worker.js" charset="utf-8"></script>
         <script src="glitch-lib.js" charset="utf-8"></script>
 
+        <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
-        <img id="imgg" src="monalisa.jpg" alt="" width="300" height="300">
-        <img id="render" src="monalisa.jpg" alt="" width="300" height="300">
-        <canvas id="canvas" width="500" height="500"></canvas>
-        <canvas id="secretCanvas" width="500" height="500"></canvas>
-        <!-- <canvas id="canvasRotate" width="500" height="500"></canvas> -->
-        <canvas id="secretCanvasRotate" width="500" height="500"></canvas>
-        <input type='file' name='img' size='65' id='uploadimage' />
-        <div>
-            nr of frames
-            <input id="nrOfFrames" type="number" name="" value="1">
-            delay between frames
-            <input id="delayBetweenFrames" type="number" name="" value="100">
+        <div class="app-container">
+            <div class="header">
+                <div class="title">
+                    ( JPEG -> Glitch -> Repeat ) -> GIF
+                </div>
+            </div>
+            <div class="horizontal-panel">
+                <div class="menu-panel">
+                    <div class="options">
+
+                        <div class="option-line">
+                            <div class="option-label">Nr of frames (copies of src image):</div>
+                            <div class="option-input"><input id="nrOfFrames" type="number" name="" value="30"></div>
+                        </div>
+                        <div class="option-line">
+                            <div class="option-label">How much glitch / frame:</div>
+                            <input id="howMuchGlitch" type="number" name="" value="1">
+                        </div>
+                        <div class="option-line">
+                            <div class="option-label">Delay between frames (milliseconds):</div>
+                            <input id="delayBetweenFrames" type="number" name="" value="100">
+                        </div>
+                        <div class="option-line">
+                            <div class="option-label">Initial delay (milliseconds):</div>
+                            <input id="initialDelay" type="number" name="" value="1500">
+                        </div>
+                        <div class="option-line">
+                            <div class="option-label">Source image:</div>
+                            <input type='file' name='img' size='65' id='uploadimage' />
+                        </div>
+                        <div class="option-line">
+                            <div class="option-label"></div>
+                            <button type="button" id="redoButton" onclick="draw();">Redo</button>
+
+                        </div>
+                        <div id="wait">
+                            Please wait...
+                            <div class="spinner">
+                              <div class="rect1"></div>
+                              <div class="rect2"></div>
+                              <div class="rect3"></div>
+                              <div class="rect4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-panel">
+                    <div class="img-panel">
+                        <div class="title-label">Source image:</div>
+                        <canvas id="canvas"></canvas>
+                        <canvas id="secretCanvas"></canvas>
+                        <canvas id="secretCanvasRotate"></canvas>
+                    </div>
+                    <div class="img-panel">
+                        <div class="title-label">Result image:</div>
+                        <img id="render" src="monalisa.jpg" alt="" >
+
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
         <script src="script.js" charset="utf-8"></script>
