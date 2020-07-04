@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
 html {
     width: 100%; height: 100%;
 }
@@ -5,46 +7,22 @@ body {
     width:100%; height: 100%;
     padding:0;
     margin:0;
-
-    background: url(bg3.gif) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-
-
+    background-color: #EEEEEF;
 }
-
-
 
 .app-container {
     width: 100%; height: 100%;
-    display: flex; flex-flow: column;
+    display: flex; flex-flow: row;
     box-sizing: border-box;
 }
 
 .menu-container {
-    width: 100%;
+    width: 300px; max-width: 300px; min-width: 300px; height: auto;
     flex-grow: 1;
     display: flex; flex-flow: column;
-    justify-content: center; align-items: center;
     box-sizing: border-box;
-}
-
-.top-menu-container {
-    width: 100%;
-    display: flex; flex-flow: column;
-}
-
-.menu {
-    width: 100%;
-    display: flex; flex-flow: row;
-    /* height: 50px; */
-    /* background-color: yellow; */
-}
-
-.list-menu {
-    display: flex; flex-flow: column;
+    justify-content: center;
+    margin-left: 150px;
 }
 
 .menu-item {
@@ -53,58 +31,56 @@ body {
 }
 
 a.menu-link {
-    background-color: yellow;
     padding: 5px;
     border-radius: 10px;
     color: black;
     border: 0;
     text-decoration: none;
     font-size: 20px;
-    font-family: sans-serif;
-    font-family: monospace;
     cursor: pointer;
-    /* padding: 20px; */
+    font-family: 'Italiana', serif;
 }
 a.menu-link:hover {
-    background-color: white;
+    background-color: yellow;
 }
 
 .logo {
     font-size: 40px;
-    font-family: sans-serif;
-    font-family: monospace;
-    padding: 10px 50px;
-    color: black;
-    color: white;
-    background-color: black;
+    font-family: 'Italiana', serif;
+    padding: 10px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    text-align: center;
+}
+
+.glitch {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: row;
+    justify-content: center; align-items: center;
 }
 
 .footer {
+    flex-shrink: 0;
     display: flex; float: row; justify-content: space-between;
-    color: white;
-    font-family: monospace;
+    font-family: 'Italiana', serif;
 }
 
 .footer-link {
-    color: white;
+    color: black;
     font-family: monospace;
     padding: 10px;
 }
-
-.source-code {
-
-}
-
-.credits {
-
-}
-
-
 
 .page-container {
     width: 100%;
     flex-grow: 1;
     display: flex; flex-flow: column;
+}
+
+@media all and (max-width: 700px) {
+    .glitch {
+        display: none;
+    }
+    .menu-container {
+        margin: 0;
+    }
 }
